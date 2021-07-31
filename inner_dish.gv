@@ -1,0 +1,260 @@
+
+/* Start of top-level graph */
+digraph Workflow {
+rankdir=TB
+
+/* Title for graph */
+fontname=Helvetica; fontsize=18; labelloc=t
+label=Parallel_OR
+
+/* Start of double cluster for drawing box around nodes in workflow */
+subgraph cluster_workflow_box_outer { label=""; color=black; penwidth=2
+subgraph cluster_workflow_box_inner { label=""; penwidth=0
+
+/* Style for nodes representing atomic programs in workflow */
+node[shape=box style=filled fillcolor="#CCFFCC" peripheries=1 fontname=Helvetica]
+
+/* Nodes representing atomic programs in workflow */
+"core/column-removal0" [shape=record rankdir=LR label="{<f0> core/column-removal0 |<f1> Remove column description}"];
+"core/text-transform1" [shape=record rankdir=LR label="{<f0> core/text-transform1 |<f1> Text transform on cells in column menus_appeared using expression value.replace(/\\s+/,' ')}"];
+"core/text-transform2" [shape=record rankdir=LR label="{<f0> core/text-transform2 |<f1> Text transform on cells in column name using expression value.replace(/\\s+/,' ')}"];
+"core/text-transform3" [shape=record rankdir=LR label="{<f0> core/text-transform3 |<f1> Text transform on cells in column id using expression value.replace(/\\s+/,' ')}"];
+"core/text-transform4" [shape=record rankdir=LR label="{<f0> core/text-transform4 |<f1> Text transform on cells in column times_appeared using expression value.replace(/\\s+/,' ')}"];
+"core/text-transform5" [shape=record rankdir=LR label="{<f0> core/text-transform5 |<f1> Text transform on cells in column first_appeared using expression value.replace(/\\s+/,' ')}"];
+"core/text-transform6" [shape=record rankdir=LR label="{<f0> core/text-transform6 |<f1> Text transform on cells in column last_appeared using expression value.replace(/\\s+/,' ')}"];
+"core/text-transform7" [shape=record rankdir=LR label="{<f0> core/text-transform7 |<f1> Text transform on cells in column lowest_price using expression value.replace(/\\s+/,' ')}"];
+"core/text-transform8" [shape=record rankdir=LR label="{<f0> core/text-transform8 |<f1> Text transform on cells in column highest_price using expression value.replace(/\\s+/,' ')}"];
+"core/text-transform9" [shape=record rankdir=LR label="{<f0> core/text-transform9 |<f1> Text transform on cells in column menus_appeared using expression value.toNumber()}"];
+"core/text-transform10" [shape=record rankdir=LR label="{<f0> core/text-transform10 |<f1> Text transform on cells in column times_appeared using expression value.toNumber()}"];
+"core/text-transform11" [shape=record rankdir=LR label="{<f0> core/text-transform11 |<f1> Text transform on cells in column first_appeared using expression value.toNumber()}"];
+"core/text-transform12" [shape=record rankdir=LR label="{<f0> core/text-transform12 |<f1> Text transform on cells in column last_appeared using expression value.toNumber()}"];
+"core/text-transform13" [shape=record rankdir=LR label="{<f0> core/text-transform13 |<f1> Text transform on cells in column lowest_price using expression value.toNumber()}"];
+"core/text-transform14" [shape=record rankdir=LR label="{<f0> core/text-transform14 |<f1> Text transform on cells in column highest_price using expression value.toNumber()}"];
+"core/row-removal15" [shape=record rankdir=LR label="{<f0> core/row-removal15 |<f1> Remove rows}"];
+"core/row-removal16" [shape=record rankdir=LR label="{<f0> core/row-removal16 |<f1> Remove rows}"];
+"core/row-removal17" [shape=record rankdir=LR label="{<f0> core/row-removal17 |<f1> Remove rows}"];
+"core/text-transform18" [shape=record rankdir=LR label="{<f0> core/text-transform18 |<f1> Text transform on cells in column menus_appeared using expression value.toNumber()}"];
+"core/text-transform19" [shape=record rankdir=LR label="{<f0> core/text-transform19 |<f1> Text transform on cells in column times_appeared using expression value.toNumber()}"];
+"core/text-transform20" [shape=record rankdir=LR label="{<f0> core/text-transform20 |<f1> Text transform on cells in column first_appeared using expression value.toNumber()}"];
+"core/text-transform21" [shape=record rankdir=LR label="{<f0> core/text-transform21 |<f1> Text transform on cells in column last_appeared using expression value.toNumber()}"];
+"core/text-transform22" [shape=record rankdir=LR label="{<f0> core/text-transform22 |<f1> Text transform on cells in column lowest_price using expression value.toNumber()}"];
+"core/text-transform23" [shape=record rankdir=LR label="{<f0> core/text-transform23 |<f1> Text transform on cells in column highest_price using expression value.toNumber()}"];
+"core/mass-edit24" [shape=record rankdir=LR label="{<f0> core/mass-edit24 |<f1> Mass edit cells in column name}"];
+"core/mass-edit25" [shape=record rankdir=LR label="{<f0> core/mass-edit25 |<f1> Mass edit cells in column name}"];
+"core/mass-edit26" [shape=record rankdir=LR label="{<f0> core/mass-edit26 |<f1> Mass edit cells in column name}"];
+"core/mass-edit27" [shape=record rankdir=LR label="{<f0> core/mass-edit27 |<f1> Mass edit cells in column name}"];
+"core/mass-edit28" [shape=record rankdir=LR label="{<f0> core/mass-edit28 |<f1> Mass edit cells in column name}"];
+"core/mass-edit29" [shape=record rankdir=LR label="{<f0> core/mass-edit29 |<f1> Mass edit cells in column name}"];
+"core/mass-edit30" [shape=record rankdir=LR label="{<f0> core/mass-edit30 |<f1> Mass edit cells in column name}"];
+"core/mass-edit31" [shape=record rankdir=LR label="{<f0> core/mass-edit31 |<f1> Mass edit cells in column name}"];
+"core/mass-edit32" [shape=record rankdir=LR label="{<f0> core/mass-edit32 |<f1> Mass edit cells in column name}"];
+"core/mass-edit33" [shape=record rankdir=LR label="{<f0> core/mass-edit33 |<f1> Mass edit cells in column name}"];
+"core/mass-edit34" [shape=record rankdir=LR label="{<f0> core/mass-edit34 |<f1> Mass edit cells in column name}"];
+"core/mass-edit35" [shape=record rankdir=LR label="{<f0> core/mass-edit35 |<f1> Mass edit cells in column name}"];
+"core/mass-edit36" [shape=record rankdir=LR label="{<f0> core/mass-edit36 |<f1> Mass edit cells in column name}"];
+"core/mass-edit37" [shape=record rankdir=LR label="{<f0> core/mass-edit37 |<f1> Mass edit cells in column name}"];
+"core/mass-edit38" [shape=record rankdir=LR label="{<f0> core/mass-edit38 |<f1> Mass edit cells in column name}"];
+"core/mass-edit39" [shape=record rankdir=LR label="{<f0> core/mass-edit39 |<f1> Mass edit cells in column name}"];
+CombineDataCleaningChanges
+
+/* Style for nodes representing non-parameter data channels in workflow */
+node[shape=box style="rounded,filled" fillcolor="#FFFFCC" peripheries=1 fontname=Helvetica]
+
+/* Nodes for non-parameter data channels in workflow */
+CleanData
+description
+menus_appeared
+name
+id
+times_appeared
+first_appeared
+last_appeared
+lowest_price
+highest_price
+menus_appeared_1
+times_appeared_1
+first_appeared_1
+last_appeared_1
+lowest_price_1
+highest_price_1
+first_appeared_2
+last_appeared_2
+last_appeared_3
+menus_appeared_2
+times_appeared_2
+first_appeared_3
+last_appeared_4
+lowest_price_2
+highest_price_2
+name_1
+name_2
+name_3
+name_4
+name_5
+name_6
+name_7
+name_8
+name_9
+name_10
+name_11
+name_12
+name_13
+name_14
+name_15
+name_16
+"remove-description"
+menus_appeared_3
+name_17
+id_1
+times_appeared_3
+first_appeared_4
+last_appeared_5
+lowest_price_3
+highest_price_3
+
+/* Style for nodes representing parameter channels in workflow */
+node[shape=box style="rounded,filled" fillcolor="#FCFCFC" peripheries=1 fontname=Helvetica]
+
+/* Nodes representing parameter channels in workflow */
+"expression:value.replace(/\\s+/,'_')"
+"expression:value.toNumber()"
+"mode:row-based"
+"expression:value"
+
+/* Edges representing connections between programs and channels */
+"core/column-removal0" -> "remove-description"
+description -> "core/column-removal0"
+"core/text-transform1" -> menus_appeared_1
+"expression:value.replace(/\\s+/,'_')" -> "core/text-transform1"
+menus_appeared -> "core/text-transform1"
+"core/text-transform2" -> name_1
+"expression:value.replace(/\\s+/,'_')" -> "core/text-transform2"
+name -> "core/text-transform2"
+"core/text-transform3" -> id_1
+"expression:value.replace(/\\s+/,'_')" -> "core/text-transform3"
+id -> "core/text-transform3"
+"core/text-transform4" -> times_appeared_1
+"expression:value.replace(/\\s+/,'_')" -> "core/text-transform4"
+times_appeared -> "core/text-transform4"
+"core/text-transform5" -> first_appeared_1
+"expression:value.replace(/\\s+/,'_')" -> "core/text-transform5"
+first_appeared -> "core/text-transform5"
+"core/text-transform6" -> last_appeared_1
+"expression:value.replace(/\\s+/,'_')" -> "core/text-transform6"
+last_appeared -> "core/text-transform6"
+"core/text-transform7" -> lowest_price_1
+"expression:value.replace(/\\s+/,'_')" -> "core/text-transform7"
+lowest_price -> "core/text-transform7"
+"core/text-transform8" -> highest_price_1
+"expression:value.replace(/\\s+/,'_')" -> "core/text-transform8"
+highest_price -> "core/text-transform8"
+"core/text-transform9" -> menus_appeared_2
+"expression:value.toNumber()" -> "core/text-transform9"
+menus_appeared_1 -> "core/text-transform9"
+"core/text-transform10" -> times_appeared_2
+"expression:value.toNumber()" -> "core/text-transform10"
+times_appeared_1 -> "core/text-transform10"
+"core/text-transform11" -> first_appeared_2
+"expression:value.toNumber()" -> "core/text-transform11"
+first_appeared_1 -> "core/text-transform11"
+"core/text-transform12" -> last_appeared_2
+"expression:value.toNumber()" -> "core/text-transform12"
+last_appeared_1 -> "core/text-transform12"
+"core/text-transform13" -> lowest_price_2
+"expression:value.toNumber()" -> "core/text-transform13"
+lowest_price_1 -> "core/text-transform13"
+"core/text-transform14" -> highest_price_2
+"expression:value.toNumber()" -> "core/text-transform14"
+highest_price_1 -> "core/text-transform14"
+"core/row-removal15" -> first_appeared_3
+"mode:row-based" -> "core/row-removal15"
+first_appeared_2 -> "core/row-removal15"
+"core/row-removal16" -> last_appeared_3
+"mode:row-based" -> "core/row-removal16"
+last_appeared_2 -> "core/row-removal16"
+"core/row-removal17" -> last_appeared_4
+"mode:row-based" -> "core/row-removal17"
+last_appeared_3 -> "core/row-removal17"
+"core/text-transform18" -> menus_appeared_3
+"expression:value.toNumber()" -> "core/text-transform18"
+menus_appeared_2 -> "core/text-transform18"
+"core/text-transform19" -> times_appeared_3
+"expression:value.toNumber()" -> "core/text-transform19"
+times_appeared_2 -> "core/text-transform19"
+"core/text-transform20" -> first_appeared_4
+"expression:value.toNumber()" -> "core/text-transform20"
+first_appeared_3 -> "core/text-transform20"
+"core/text-transform21" -> last_appeared_5
+"expression:value.toNumber()" -> "core/text-transform21"
+last_appeared_4 -> "core/text-transform21"
+"core/text-transform22" -> lowest_price_3
+"expression:value.toNumber()" -> "core/text-transform22"
+lowest_price_2 -> "core/text-transform22"
+"core/text-transform23" -> highest_price_3
+"expression:value.toNumber()" -> "core/text-transform23"
+highest_price_2 -> "core/text-transform23"
+"core/mass-edit24" -> name_2
+"expression:value" -> "core/mass-edit24"
+name_1 -> "core/mass-edit24"
+"core/mass-edit25" -> name_3
+"expression:value" -> "core/mass-edit25"
+name_2 -> "core/mass-edit25"
+"core/mass-edit26" -> name_4
+"expression:value" -> "core/mass-edit26"
+name_3 -> "core/mass-edit26"
+"core/mass-edit27" -> name_5
+"expression:value" -> "core/mass-edit27"
+name_4 -> "core/mass-edit27"
+"core/mass-edit28" -> name_6
+"expression:value" -> "core/mass-edit28"
+name_5 -> "core/mass-edit28"
+"core/mass-edit29" -> name_7
+"expression:value" -> "core/mass-edit29"
+name_6 -> "core/mass-edit29"
+"core/mass-edit30" -> name_8
+"expression:value" -> "core/mass-edit30"
+name_7 -> "core/mass-edit30"
+"core/mass-edit31" -> name_9
+"expression:value" -> "core/mass-edit31"
+name_8 -> "core/mass-edit31"
+"core/mass-edit32" -> name_10
+"expression:value" -> "core/mass-edit32"
+name_9 -> "core/mass-edit32"
+"core/mass-edit33" -> name_11
+"expression:value" -> "core/mass-edit33"
+name_10 -> "core/mass-edit33"
+"core/mass-edit34" -> name_12
+"expression:value" -> "core/mass-edit34"
+name_11 -> "core/mass-edit34"
+"core/mass-edit35" -> name_13
+"expression:value" -> "core/mass-edit35"
+name_12 -> "core/mass-edit35"
+"core/mass-edit36" -> name_14
+"expression:value" -> "core/mass-edit36"
+name_13 -> "core/mass-edit36"
+"core/mass-edit37" -> name_15
+"expression:value" -> "core/mass-edit37"
+name_14 -> "core/mass-edit37"
+"core/mass-edit38" -> name_16
+"expression:value" -> "core/mass-edit38"
+name_15 -> "core/mass-edit38"
+"core/mass-edit39" -> name_17
+"expression:value" -> "core/mass-edit39"
+name_16 -> "core/mass-edit39"
+CombineDataCleaningChanges -> CleanData
+description -> CombineDataCleaningChanges
+"remove-description" -> CombineDataCleaningChanges
+menus_appeared_3 -> CombineDataCleaningChanges
+name_17 -> CombineDataCleaningChanges
+id_1 -> CombineDataCleaningChanges
+times_appeared_3 -> CombineDataCleaningChanges
+first_appeared_4 -> CombineDataCleaningChanges
+last_appeared_5 -> CombineDataCleaningChanges
+lowest_price_3 -> CombineDataCleaningChanges
+highest_price_3 -> CombineDataCleaningChanges
+
+/* End of double cluster for drawing box around nodes in workflow */
+}}
+
+/* End of top-level graph */
+}
