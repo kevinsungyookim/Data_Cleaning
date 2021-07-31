@@ -1,0 +1,44 @@
+digraph Workflow {
+rankdir=LR
+fontname=Courier; fontsize=18; labelloc=t
+label="cleaning_dish.csv"
+subgraph cluster_workflow_box_outer { label=""; color=black; penwidth=2
+subgraph cluster_workflow_box_inner { label=""; color=white
+node[shape=box style=filled fillcolor="#CCFFCC" peripheries=1 fontname=Courier]
+icv_dish_csv
+clean_dish_csv
+icv_clean_dish_csv
+node[shape=box style="rounded,filled" fillcolor="#FFFFCC" peripheries=1 fontname=Helvetica]
+"clean_dish.csv"
+dish_icv
+clean_dish_icv
+"dish.csv" [label="file://dish.csv"]
+node[shape=box style="rounded,filled" fillcolor="#FCFCFC" peripheries=1 fontname=Helvetica]
+icv_dish_csv -> dish_icv
+SQL_sequence -> icv_dish_csv
+"dish.csv" -> icv_dish_csv
+clean_dish_csv -> "clean_dish.csv"
+OpenRefineStep -> clean_dish_csv
+"dish.csv" -> clean_dish_csv
+dish_icv -> clean_dish_csv
+icv_clean_dish_csv -> clean_dish_icv
+SQL_sequence -> icv_clean_dish_csv
+"clean_dish.csv" -> icv_clean_dish_csv
+}}
+subgraph cluster_input_ports_group_outer { label=""; color=white
+subgraph cluster_input_ports_group_inner { label=""; color=white
+node[shape=circle style="rounded,filled" fillcolor="#FFFFFF" peripheries=1 fontname=Helvetica width=0.2]
+"dish.csv_input_port" [label=""]
+}}
+subgraph cluster_output_ports_group_outer { label=""; color=white
+subgraph cluster_output_ports_group_inner { label=""; color=white
+node[shape=circle style="rounded,filled" fillcolor="#FFFFFF" peripheries=1 fontname=Helvetica width=0.2]
+"clean_dish.csv_output_port" [label=""]
+dish_icv_output_port [label=""]
+clean_dish_icv_output_port [label=""]
+}}
+"dish.csv_input_port" -> "dish.csv"
+"clean_dish.csv" -> "clean_dish.csv_output_port"
+dish_icv -> dish_icv_output_port
+clean_dish_icv -> clean_dish_icv_output_port
+}

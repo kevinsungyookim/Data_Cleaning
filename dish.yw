@@ -1,0 +1,38 @@
+
+
+# @BEGIN cleaning_dish.csv
+# @DESC The overall workflow 
+# @in dish.csv @URI file://dish.csv
+# @OUT clean_dish.csv  @URI file://clean_dish.csv
+# @OUT dish_icv 
+# @OUT clean_dish_icv 
+
+# @BEGIN icv_dish_csv
+# @PARAM SQL_sequence
+# @DESC Detect ICV using SQL
+# @IN dish.csv @URI file://dish.csv
+# @OUT dish_icv 
+
+# @END icv_dish_csv
+
+
+# @BEGIN clean_dish_csv
+# @PARAM OpenRefineStep
+# @DESC Clean dish.csv usin OpenRefine
+# @IN dish.csv @URI file://dish.csv
+# @IN dish_icv
+# @OUT clean_dish.csv
+# @END clean_dish_csv
+
+
+# @BEGIN icv_clean_dish_csv
+# @PARAM SQL_sequence
+# @DESC Detect ICV in clean using SQL
+# @IN clean_dish.csv @URI file://clean_dish.csv
+# @OUT clean_dish_icv 
+
+# @END icv_clean_dish_csv
+    
+
+
+# @END cleaning_dish.csv
